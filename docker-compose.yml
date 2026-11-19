@@ -1,0 +1,13 @@
+services:
+  lendar-bot:
+    build: .
+    container_name: lendar-bot
+    restart: unless-stopped
+    environment:
+      BOT_NAME: "Lëndärįø"
+      BOT_NUMBER: "258841482598"
+      OWNER_NAME: "Almiro"
+      OWNER_NUMBER: "258858519051"
+    volumes:
+      - ./auth:/app/auth
+      - ./data:/app/data
